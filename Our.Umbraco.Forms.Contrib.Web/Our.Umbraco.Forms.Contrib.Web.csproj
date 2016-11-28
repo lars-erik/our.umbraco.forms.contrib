@@ -393,7 +393,7 @@
     <Content Include="App_Plugins\UmbracoForms\Data\Web.config" />
     <Content Include="App_Plugins\UmbracoForms\Data\Templates\contactform.json" />
     <Content Include="App_Plugins\UmbracoForms\Data\Templates\commentform.json" />
-    <Content Include="App_Plugins\UmbracoFormsContrib\Views\FieldType.RichDisplayedText.cshtml" />
+    <Content Include="Views\Partials\Forms\Fieldtypes\FieldType.TitleAndRichDescription.cshtml" />
     <Content Include="App_Plugins\UmbracoFormsContrib\package.manifest" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -584,6 +584,9 @@
       <Project>{d91ce787-3689-4081-99c7-f4bd001eb4c1}</Project>
       <Name>Our.Umbraco.Forms.Contrib</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Plugins\UmbracoFormsContrib\Views\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

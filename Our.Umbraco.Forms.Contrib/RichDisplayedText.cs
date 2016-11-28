@@ -36,8 +36,6 @@ namespace Our.Umbraco.Forms.Contrib
 
             this.Category = "Simple";
             this.SortOrder = 110;
-
-            this.FieldTypeViewName = "~/App_Plugins/UmbracoFormsContrib/Views/FieldType.RichDisplayedText.cshtml";
         }
 
         public override string GetDesignView()
