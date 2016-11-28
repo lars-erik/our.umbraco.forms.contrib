@@ -1,0 +1,51 @@
+<div class="umb-forms-entry">
+
+    <div class="umb-forms-entry-main">
+
+        <!-- TODO: make render types directive so the RenderTypes don't rely a "field" model -->
+        <div class="umb-control-group" ng-repeat="detail in entry.details">
+            <label class="control-label">{{ detail.name }}</label>
+            <umb-forms-render-type
+                field="detail.value"
+                view="detail.view">
+            </umb-forms-render-type>
+        </div>
+
+    </div>
+
+
+    <div class="umb-forms-entry-sidebar">
+
+        <!--
+        TODO: Why is date filter adding 1hr, is there some weird summer GMT offset or something<br/>
+        2016-05-10T15:00:34.973Z
+        --->
+
+        <div class="umb-control-group -no-border">
+            <label class="control-label">Submitted on</label>
+            <div>{{entry.created | date : 'dd MMM yyyy, HH:mm' }}</div>
+        </div>
+
+        <div class="umb-control-group -no-border" ng-if="entry.updated !== entry.created">
+            <label class="control-label">Updated on</label>
+            <div>{{entry.updated | date : 'dd MMM yyyy, HH:mm'}}</div>
+        </div>
+
+        <div class="umb-control-group -no-border">
+            <label class="control-label">State</label>
+            <div>{{entry.state}}</div>
+        </div>
+
+        <div class="umb-control-group -no-border">
+            <label class="control-label">Id</label>
+            <div>{{entry.id}}</div>
+        </div>
+
+        <div class="umb-control-group -no-border">
+            <label class="control-label">Unique id</label>
+            <div><small>{{entry.uniqueId}}</small></div>
+        </div>
+
+    </div>
+
+</div>

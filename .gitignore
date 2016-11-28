@@ -240,3 +240,8 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+
+umbraco/
+umbraco_client/
+app_data/
+app_browsers/
